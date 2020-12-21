@@ -7,7 +7,7 @@ if [ "$DRONE_JOB_UUID" = "b6589fc6ab" ] || [ "$DRONE_JOB_UUID" = "356a192b79" ] 
     if [ ${TRAVIS_OS_NAME} == "linux" ]; then .ci/install-ocl-ubuntu.sh; fi
     .ci/install-clblas.sh
     cmake --version;
-    ${CC} --version;
+    true ${CC} --version;
     ${CXX} --version;
 fi
 
